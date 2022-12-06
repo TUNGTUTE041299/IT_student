@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <style>
+        .erro{
+            color: brown;
+        }
+    </style>
+
+</head>
+<body>
+    <main>
+        <h1>学生情報 Form</h1>
+        <form action="sql_create.php" method="post">
+            <label for="id">学生番号</label>
+            <input type="text" id="id" name="id" placeholder="Ex:K217035->217035" maxlength = "6">
+            <span id="erroID" class="erro"></span>
+            <br>
+            <label for="name">名前</label>
+            <input type="text" id="name" name="name" placeholder="Ex:LETHANHTUNG"  maxlength = "100">
+            <span id="erroName" class="erro"></span>
+            <br>
+            <div class="connext" > 
+                <label for="country">母国</label>      
+                <select name="country" id="country">
+                    <option>VIETNAM</option>
+                    <option>JAPAN</option>
+                    <option>CHINA</option>
+                    <option>Uzbekistan</option>
+                    <option>BANGLADES</option>
+                    <option>NEPAL</option>
+                    <option>MYANMAR</option>
+                    <option>other</option>
+                </select>      
+            </div>
+            <div class="connext">
+                <span>性別:</span>
+                <label>
+                    <input type="radio" name="type" value="0">
+                        男性
+                </label>
+                <label>
+                    <input type="radio" name="type" value="1">
+                        女性
+                </label>
+                <span id="erroType"  class="erro"></span>
+            </div>
+
+                <span>誕生日</span>
+                <label>
+                    <input type="date" id="date" name="date" min="1899-01-01" max="2017-04-20">     
+                </label>
+                <span id="erroDate"  class="erro"></span>
+                
+            <br>
+            <div class="connext" > 
+                <label for="course">コース</label>      
+                <select name="course" id="course">
+                    <option value="0">IT</option>
+                    <option value="1">Hottel</option>
+                    <option value="2">Business</option>
+                </select>      
+            </div>
+            
+            <br>
+
+            <label for="contact">連絡アドレス</label> 
+            <br> 
+            <input style="display:inline-block;" type="text" id="contact" name=contact placeholder="電話番号,Facebook"> 
+            <span id="erroContact"  class="erro"></span>
+            
+
+
+            <input class="btn" type="submit" value="submit" onclick="return checkForm()">
+        
+        </form>
+
+    </main>
+    <script src="./check_form.js"></script>
+</body>
+</html>

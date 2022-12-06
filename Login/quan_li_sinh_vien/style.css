@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+
+    display: block;
+    width: 400px;
+    height: 500px;
+    background-color: rgba(188, 183, 183, 0.5);
+    background-size: auto;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+
+}
+.btn{
+    padding: 4px;
+    border-radius: 5px;
+    text-align: center;
+}
